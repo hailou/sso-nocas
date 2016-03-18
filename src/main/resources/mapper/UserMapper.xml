@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itsinic.sso.dao.UserDAO">
+
+	<select id="getUserByName" parameterType="user" resultType="User">
+		SELECT * FROM oms_power_account a WHERE a.account = #{userName}
+	</select>
+
+</mapper>
